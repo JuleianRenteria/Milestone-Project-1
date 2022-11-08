@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif; 
+ }
+ 
+ .background {
+     background-color: grey;
+     height: 100vh;
+     padding-top: 2px;
+ }
+ 
+ .title {
+     color: rgb(6, 248, 188);
+     font-size: 80px;
+     margin-top: 50%;
+     text-align: center;
+ }
+
+h1 {
+    text-align: center;
+    padding: 1em;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+  }
+
+  .display {
+    color: #3C6376;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.box {
+    border: 1px solid#BDDBDE;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.playerX {
+    color: black;
+}
+
+.playerO {
+    color: orange;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#reset {
+    color: red;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 1em;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.h3 {
+    color: black;
+    font-size: 80px;
+    margin-top: 50%;
+    text-align: center;  
+}
+
+.h4 {
+    color: #050505;
+     font-size: 80px;
+     margin-top: 50%;
+     text-align: center;
+}
