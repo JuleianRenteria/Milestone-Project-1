@@ -1,0 +1,103 @@
+$primary-font: 'Itim', cursive
+$primary-color: #1e678b
+$player-x-color: #b7c309
+$player-o-color: #fb49f2
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function calculate-font-size($base-size, $multiplier) {
+  @return $base-size * $multiplier;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $primary-font;
+}
+
+.background {
+  background-color: $primary-color;
+  height: 100vh;
+  padding-top: 1px;
+}
+
+.title {
+  color: rgb(209, 27, 27);
+  text-align: center;
+  font-size: calculate-font-size(40px, 1);
+  margin-top: 10%;
+
+  &.highlighted {
+    font-weight: bold;
+  }
+}
+
+.display {
+  color: rgb(15, 0, 223);
+  font-size: 25px;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 33%);
+  max-width: 300px;
+}
+
+.tile {
+  border: 1px solid rgb(39, 8, 8);
+  min-width: 100px;
+  min-height: 100px;
+  @include center;
+  font-size: calculate-font-size(50px, 1);
+  cursor: pointer;
+
+  &.active {
+    border-width: 2px;
+  }
+}
+
+.playerX {
+  color: $player-x-color;
+}
+
+.playerO {
+  color: $player-o-color;
+}
+
+.controls {
+  @include center;
+  margin-top: 1em;
+
+  button {
+    color: rgb(0, 209, 0);
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
+
+.restart {
+  background-color: #498AFB;
+}
+
+#reset {
+  background-color: #000000;
+  color: white;
+}
